@@ -1,0 +1,11 @@
+.center-vertical {
+  margin-top: 40%;
+}
+.row{
+  background-color: rgb(216, 189, 98);
+}
+.label{
+  color:white;
+  font-size:30px;
+  font-weight:bolder
+}
