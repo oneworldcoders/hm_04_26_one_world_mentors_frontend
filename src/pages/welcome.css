@@ -18,6 +18,19 @@
 .logo {
   margin-right: auto;
   margin-left: 16px;
+  display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.logo:before {
+	background-image: url('/assets/logo.jpg');
+  background-size: 31px 31px;
+	display: inline-block;
+	width: 31px;
+	height: 31px;
+	margin-right: 8px;
+	content:"";
 }
 
 .action {
@@ -43,6 +56,8 @@
 
 .right {
   width: 50%;
+  background-image: url(/assets/mentors.jpg);
+  background-size: 100% 100%;
 }
 
 .tagline {
