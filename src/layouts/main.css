@@ -1,0 +1,51 @@
+.welcome {
+  height: 100%;
+  text-align: center;
+}
+
+.menu {
+  position: absolute;
+  color: #F2F2F2;
+  width: 100%;
+  height: 47px;
+  background: #4F4F4F;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.logo {
+  margin-right: auto;
+  margin-left: 16px;
+  display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.logo:before {
+	background-image: url('/assets/logo.jpg');
+  background-size: 31px 31px;
+	display: inline-block;
+	width: 31px;
+	height: 31px;
+	margin-right: 8px;
+	content:"";
+}
+
+.action {
+  margin-right: auto;
+  color: #F2C94C;
+}
+
+.hero {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+}
+
+.link {
+  color: #F2F2F2;
+  text-decoration: none;
+  margin-right: 16px;
+}
