@@ -1,10 +1,9 @@
 import React from 'react'
-import './welcome.css';
-import Main from '../layouts/Main';
+import './landing.css';
 
-export default function welcome() {
+export default function Landing() {
   return (
-    <Main>
+    <>
       <div className="left">
         <div className="tagline">
           Interested in becoming a Software Developer in months?
@@ -15,6 +14,6 @@ export default function welcome() {
       </div>
       <div className="right">
       </div>
-    </Main>
+    </>
   )
 }
