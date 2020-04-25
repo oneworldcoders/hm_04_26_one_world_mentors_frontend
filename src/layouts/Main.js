@@ -12,7 +12,7 @@ export default function Main({ children }) {
         <Link to="" className="action">
           Become a Mentor
         </Link>
-        <Link to="" className="link">
+        <Link to="/signup" className="link">
           Register
         </Link>
         <Link to="/login" className="link">
