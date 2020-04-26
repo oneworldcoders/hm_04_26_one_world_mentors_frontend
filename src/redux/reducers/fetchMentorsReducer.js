@@ -1,7 +1,7 @@
 import { FETCH_MENTORS } from "../actions/types";
 
 const initialState = {
-  mentors: {},
+  mentors: [],
 };
 
 const fetchMentors = (state = initialState, action) => {
