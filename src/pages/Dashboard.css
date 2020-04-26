@@ -1,0 +1,53 @@
+
+
+.sidebar {
+  height: 100%;
+  background: rgb(230, 199, 109);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 1rem;
+}
+
+.dash {
+  /* width: 20%;
+  margin: auto;
+  background-size: 100% 100%; */
+
+  /* display: grid; */
+  /* margin: 20px 0 50px 0; */
+  /* grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 1fr;
+  grid-gap: 1rem; */
+}
+
+.mentors{
+  background-color:red;
+  margin-top:40px
+}
+.mentee{
+  margin-top:5rem
+}
+.dash-inner{
+  width: 100%;
+  height: 80%;
+  border-radius: 1.5rem;
+  margin: auto;
+  background-color:  rgb(230, 199, 109);
+  color: black;
+  padding: 1rem;
+}
+.mentors-list{
+ 
+  font-size: 1rem;
+  margin-top:40px
+}
+.choko{
+  background: #fff
+}
+.profile-img {
+  font-weight: 900;
+  font-size: 36px;
+  /* line-height: 42px; */
+}
