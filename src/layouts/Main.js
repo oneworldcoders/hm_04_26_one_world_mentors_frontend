@@ -1,29 +1,28 @@
-import React from 'react'
-import './main.css';
+import React from "react";
+import "./main.css";
+import { Link } from "react-router-dom";
 
 export default function Main({ children }) {
   return (
     <div className="welcome">
       <div className="menu">
-        <div className="logo">
+        <Link style={{ color: "white" }} to="" className="logo">
           Mentors
-        </div>
-        <div className="action">
+        </Link>
+        <Link to="" className="action">
           Become a Mentor
-        </div>
-        <a className="link" href="/register">
+        </Link>
+        <Link to="" className="link">
           Register
-        </a>
-        <a className="link" href="/login">
+        </Link>
+        <Link to="/login" className="link">
           Login
-        </a>
-        <a className="link" href="/about">
+        </Link>
+        <Link to="" className="link">
           About
-        </a>
+        </Link>
       </div>
-      <div className="hero">
-        {children}
-      </div>
+      <div className="hero">{children}</div>
     </div>
-  )
+  );
 }
