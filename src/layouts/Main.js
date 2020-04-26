@@ -18,7 +18,7 @@ export default function Main({ children }) {
         <Link to="/login" className="link">
           Login
         </Link>
-        <Link to="" className="link">
+        <Link to="#" className="link">
           About
         </Link>
       </div>

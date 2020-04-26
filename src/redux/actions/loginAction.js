@@ -11,6 +11,8 @@ export const loginUser = login_detail => dispatch => {
   axios
     .post(`${baseUrl}/login`, login_detail)
     .then(res => {
+      const { token } = res.data;
+      localStorage.setItem('jwtToken', token);
       dispatch({
         type: LOGIN,
         payload: res.data
