@@ -1,13 +1,13 @@
-import React from 'react'
-import './main.css';
-import {Link} from "react-router-dom";
+import React from "react";
+import "./main.css";
+import { Link } from "react-router-dom";
 
 export default function Main({ children }) {
   return (
     <div className="welcome">
       <div className="menu">
-        <Link style={{color: 'white'}} to="" className="logo">
-         Mentors
+        <Link style={{ color: "white" }} to="" className="logo">
+          Mentors
         </Link>
         <Link to="" className="action">
           Become a Mentor
@@ -22,9 +22,7 @@ export default function Main({ children }) {
           About
         </Link>
       </div>
-      <div className="hero">
-        {children}
-      </div>
+      <div className="hero">{children}</div>
     </div>
-  )
+  );
 }

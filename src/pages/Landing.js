@@ -1,5 +1,5 @@
-import React from 'react'
-import './landing.css';
+import React from "react";
+import "./landing.css";
 
 export default function Landing() {
   return (
@@ -8,12 +8,9 @@ export default function Landing() {
         <div className="tagline">
           Interested in becoming a Software Developer in months?
         </div>
-        <div className="subtitle">
-          Register and meet a mentor.
-        </div>
+        <div className="subtitle">Register and meet a mentor.</div>
       </div>
-      <div className="right">
-      </div>
+      <div className="right"></div>
     </>
-  )
+  );
 }
