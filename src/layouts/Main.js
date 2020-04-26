@@ -6,12 +6,12 @@ export default function Main({ children }) {
   return (
     <div className="welcome">
       <div className="menu">
-        <div className="logo">
-          Mentors
-        </div>
-        <div className="action">
+        <Link style={{color: 'white'}} to="" className="logo">
+         Mentors
+        </Link>
+        <Link to="" className="action">
           Become a Mentor
-        </div>
+        </Link>
         <Link to="" className="link">
           Register
         </Link>
