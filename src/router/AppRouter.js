@@ -14,6 +14,11 @@ const AppRouter = () => (
             <Landing />
           </Main>
         </Route>
+        <Route path="/login" exact>
+          <Main>
+            <Login />
+          </Main>
+        </Route>
       </Switch>
     </div>
   </BrowserRouter>

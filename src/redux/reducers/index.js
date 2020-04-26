@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux';
-import searchBooksReducer from './bookSearchReducer';
-import getBookDetails from './bookDetailsReducer';
-import favouriteBooks from './bookFavouriteReducer';
+import loginReducer from './loginReducer';
 
 
-export default combineReducers({  });
+export default combineReducers({ 
+  existingUser: loginReducer
+ });

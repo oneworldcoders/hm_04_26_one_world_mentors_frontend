@@ -1,5 +1,6 @@
 import React from 'react'
 import './main.css';
+import {Link} from "react-router-dom";
 
 export default function Main({ children }) {
   return (
@@ -11,15 +12,15 @@ export default function Main({ children }) {
         <div className="action">
           Become a Mentor
         </div>
-        <a className="link" href="/register">
+        <Link to="" className="link">
           Register
-        </a>
-        <a className="link" href="/login">
+        </Link>
+        <Link to="/login" className="link">
           Login
-        </a>
-        <a className="link" href="/about">
+        </Link>
+        <Link to="" className="link">
           About
-        </a>
+        </Link>
       </div>
       <div className="hero">
         {children}
