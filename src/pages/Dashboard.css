@@ -1,0 +1,45 @@
+
+
+.sidebar {
+  height: 100%;
+  background: rgb(70, 145, 70);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 1rem;
+}
+
+.dash {
+  width: 40%;
+  margin: auto;
+  background-size: 100% 100%;
+}
+
+.mentors{
+  background-color:red;
+  margin-top:40px
+}
+.mentee{
+  margin-top:5rem
+}
+.dash-inner{
+  border-radius: 1.5rem;
+  margin: 5rem auto;
+  background-color:  rgb(70, 145, 70);
+  color: #fff;
+  padding: 3rem;
+}
+.mentors-list{
+ 
+  font-size: 1rem;
+  margin-top:40px
+}
+.choko{
+  background: rgba(241, 219, 152, 0.69);
+}
+.profile-img {
+  font-weight: 900;
+  font-size: 36px;
+  /* line-height: 42px; */
+}
