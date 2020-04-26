@@ -11,14 +11,14 @@ const AppRouter = () => (
   <BrowserRouter>
     <div>
       <Switch>
+      <Route path="/" exact>
+          <Main>
+            <Landing />
+          </Main>
+        </Route>
         <Route path="/signup">
           <Main>
             <Register />
-          </Main>
-        </Route>
-        <Route path="/" exact>
-          <Main>
-            <Landing />
           </Main>
         </Route>
         <Route path="/login" exact>
