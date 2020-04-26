@@ -1,10 +1,11 @@
 import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import Main from "../layouts/Main"
-import Landing from "../pages/Landing"
-// import welcome from "../pages/welcome"
 import Login from "../pages/Login";
 import Register from "../components/Register"
+import Main from "../layouts/Main";
+import DashboardLayout from "../layouts/dashboardLayout"
+import Landing from "../pages/Landing";
+import Dashboard from "../pages/Dashboard";
 
 const AppRouter = () => (
   <BrowserRouter>
@@ -24,6 +25,11 @@ const AppRouter = () => (
           <Main>
             <Login />
           </Main>
+        </Route>
+        <Route path="/dashboard">
+          <DashboardLayout>
+            <Dashboard />
+          </DashboardLayout>
         </Route>
       </Switch>
     </div>
