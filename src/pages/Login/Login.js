@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import "../login.css";
 import { connect } from "react-redux";
-import { loginUser } from "../redux/actions/loginAction";
+import { loginUser } from "../../redux/actions/loginAction";
 
 function Login(props) {
   const [email, setEmail] = useState();
@@ -25,7 +24,7 @@ function Login(props) {
 
   return (
     <div className="row">
-      <div className="col-lg-6">
+      <div className="left">
         <form
           style={{ width: "60%", margin: "20rem auto" }}
           className="center-vertical"

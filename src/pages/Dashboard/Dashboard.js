@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import { fetchMentors } from "../redux/actions/fetchMentorsAction";
+import { fetchMentors } from "../../redux/actions/fetchMentorsAction";
 import { connect } from "react-redux";
 import "./Dashboard.css";
-import MenteeImage from "../assets/henry.jpg";
+import MenteeImage from "../../assets/henry.jpg";
 import { Link } from "react-router-dom";
-import MentorsList from "./MentorsList";
+import MentorsList from "../../components/Mentors/MentorsList";
 
 class Dashboard extends Component {
   componentDidMount() {

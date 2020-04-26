@@ -1,6 +1,6 @@
 import React from "react";
-import MentorImage from "../assets/dough.jpg";
-import "./Dashboard.css";
+import MentorImage from "../../assets/dough.jpg";
+import "../../pages/Dashboard/Dashboard.css";
 
 const MentorCard = (props) => {
   return (
