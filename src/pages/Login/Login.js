@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
 import { loginUser } from "../../redux/actions/loginAction";
+import "./Login.css";
 
 function Login(props) {
   const [email, setEmail] = useState();
@@ -23,49 +24,61 @@ function Login(props) {
   };
 
   return (
-    <div className="row">
-      <div className="left">
-        <form
-          style={{ width: "60%", margin: "20rem auto" }}
-          className="center-vertical"
-          onSubmit={handleSubmit}
-        >
-          <div className="form-group">
-            <label className="label">Email address</label>
-            <input
-              id="loginEmailInput"
-              type="email"
-              className="form-control"
-              placeholder="Enter email"
-              name="email"
-              onChange={onEmailChange}
-            />
+    <>
+      <div className="login_left">
+        <div className="login_tagline">
+          <div className="col-md-12 align-self-center">
+            <form onSubmit={handleSubmit}>
+              <div className="form-group row">
+                <label
+                  htmlFor="colFormLabelLg"
+                  className="col-sm-3 col-form-label col-form-label-lg"
+                >
+                  Email
+                </label>
+                <div className="col-sm-9">
+                  <input
+                    id="loginEmailInput"
+                    type="text"
+                    required
+                    className="form-control form-control-lg"
+                    placeholder="Enter email"
+                    name="email"
+                    onChange={onEmailChange}
+                  />
+                </div>
+              </div>
+              <div className="form-group row">
+                <label
+                  htmlFor="colFormLabelLg"
+                  className="col-sm-3 col-form-label col-form-label-lg"
+                >
+                  Password
+                </label>
+                <div className="col-sm-9">
+                  <input
+                    id="loginPasswordInput"
+                    type="password"
+                    className="form-control form-control-lg"
+                    placeholder="Password"
+                    name="password"
+                    onChange={onPasswordChange}
+                  />
+                </div>
+              </div>
+              <div className="form-group row">
+                <div className="col-sm-12">
+                  <button type="submit" className="btn btn-warning btn-lg">
+                    LOGIN
+                  </button>
+                </div>
+              </div>
+            </form>
           </div>
-          <div className="form-group">
-            <label className="label">Password</label>
-            <input
-              id="loginPasswordInput"
-              type="password"
-              className="form-control"
-              placeholder="Password"
-              name="password"
-              onChange={onPasswordChange}
-            />
-          </div>
-          <button type="submit" className="btn btn-success">
-            LOGIN
-          </button>
-        </form>
+        </div>
       </div>
-      <div className="right">
-        <img
-          src="https://res.cloudinary.com/opix/image/upload/v1587842002/mentor%20app/jjjjulllls.jpg"
-          width="100%"
-          height="100%"
-          alt="Juls"
-        />
-      </div>
-    </div>
+      <div className="login_right"></div>
+    </>
   );
 }
 
