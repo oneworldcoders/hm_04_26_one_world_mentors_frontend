@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
 import { loginUser } from "../../redux/actions/loginAction";
+import {Spinner} from 'react-bootstrap'
 import "./Login.css";
 
 function Login(props) {
+  console.log(props, 'props')
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
   const onEmailChange = (event) => {
@@ -23,6 +25,13 @@ function Login(props) {
     props.loginUser(login_detail);
   };
 
+  if (props.user.loading) {
+    return (
+      <Spinner animation="border" role="status">
+        <span className="sr-only">Loading...</span>
+      </Spinner>
+    );
+  }
   return (
     <>
       <div className="login_left">
