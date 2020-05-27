@@ -15,8 +15,8 @@ function DashboardLayout({ children }) {
     return (
       <div className="welcome">
         <div className="menu">
-          <div className="logo">Mentors</div>
-          <div className="action">Hello  <span style={{color:'#32b643', fontWeight: 'bold'}}>{email}</span></div>
+          <a style={{color: 'white'}}  href="/"><div className="logo">Mentors</div></a>
+          <div style={{marginLeft: 'auto', fontWeight: 'bold'}} className="action">Hello  <span style={{ color:'#32b643', fontWeight: 'bold'}}>{email}</span></div>
           <a style={{marginRight: '5rem'}} className="link" href="/about">
             Logout
           </a>
@@ -28,8 +28,8 @@ function DashboardLayout({ children }) {
   return (
     <div className="welcome">
       <div className="menu">
-        <div className="logo">Mentors</div>
-        <div className="action">Become a Mentor</div>
+      <a style={{color: 'white'}} href="/"><div className="logo">Mentors</div></a><br/>
+        <div style={{marginLeft: 'auto'}} className="action">Become a Mentor</div>
         <a className="link" href="/register">
           Register
         </a>
