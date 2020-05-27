@@ -10,6 +10,9 @@ function DashboardLayout({ children }) {
     console.log(LoggedUserEmail, "LoggedUserEmail");
   }, []);
 
+  const handleLogout = () =>{
+    localStorage.clear('jwtToken')
+  }
   const email = decodedUserEmail()
   if (email) {
     return (
@@ -17,7 +20,7 @@ function DashboardLayout({ children }) {
         <div className="menu">
           <a style={{color: 'white'}}  href="/"><div className="logo">Mentors</div></a>
           <div style={{marginLeft: 'auto', fontWeight: 'bold'}} className="action">Hello  <span style={{ color:'#32b643', fontWeight: 'bold'}}>{email}</span></div>
-          <a style={{marginRight: '5rem'}} className="link" href="/about">
+          <a onClick={handleLogout} style={{marginRight: '5rem'}} className="link" href="/">
             Logout
           </a>
         </div>
