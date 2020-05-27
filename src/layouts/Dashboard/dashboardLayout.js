@@ -1,16 +1,35 @@
-import React from 'react'
-import './dashboardLayout.css';
+import React, { useEffect } from "react";
+import { connect } from "react-redux";
+import { fetchSingleUserProfile } from "../../redux/actions/userProfileAction";
+import { decodedUserEmail } from "../../helpers/decoder";
+import "./dashboardLayout.css";
 
-export default function DashboardLayout({ children }) {
+function DashboardLayout({ children }) {
+  useEffect(() => {
+    const LoggedUserEmail = decodedUserEmail();
+    console.log(LoggedUserEmail, "LoggedUserEmail");
+  }, []);
+
+  const email = decodedUserEmail()
+  if (email) {
+    return (
+      <div className="welcome">
+        <div className="menu">
+          <a style={{color: 'white'}}  href="/"><div className="logo">Mentors</div></a>
+          <div style={{marginLeft: 'auto', fontWeight: 'bold'}} className="action">Hello  <span style={{ color:'#32b643', fontWeight: 'bold'}}>{email}</span></div>
+          <a style={{marginRight: '5rem'}} className="link" href="/about">
+            Logout
+          </a>
+        </div>
+        <div className="choko">{children}</div>
+      </div>
+    );
+  }
   return (
     <div className="welcome">
       <div className="menu">
-        <div className="logo">
-          Mentors
-        </div>
-        <div className="action">
-          Become a Mentor
-        </div>
+      <a style={{color: 'white'}} href="/"><div className="logo">Mentors</div></a><br/>
+        <div style={{marginLeft: 'auto'}} className="action">Become a Mentor</div>
         <a className="link" href="/register">
           Register
         </a>
@@ -21,9 +40,14 @@ export default function DashboardLayout({ children }) {
           About
         </a>
       </div>
-      <div className="choko">
-        {children}
-      </div>
+      <div className="choko">{children}</div>
     </div>
-  )
+  );
 }
+
+const mapStateToProps = (state) => ({
+  userProfile: state.userProfile,
+});
+export default connect(mapStateToProps, { fetchSingleUserProfile })(
+  DashboardLayout
+);

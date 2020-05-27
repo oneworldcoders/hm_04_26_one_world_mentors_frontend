@@ -14,13 +14,17 @@
   align-items: center;
   justify-content: flex-end;
 }
-
+.menu a{
+  color: white;
+}
 .logo {
   margin-right: auto;
   margin-left: 16px;
   display: flex;
 	justify-content: center;
-	align-items: center;
+  align-items: center;
+  color: #F2F2F2 !important;
+  text-decoration: none;
 }
 
 .logo:before {

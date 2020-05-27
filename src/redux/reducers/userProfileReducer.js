@@ -2,6 +2,7 @@ import {FETCH_SINGLE_USER} from '../actions/types';
 
 const intitialState = {
   user: [],
+  isAuthenticated: false
 }
 
 const fetchSingleUserProfile = (state = intitialState, action) => {
@@ -9,7 +10,8 @@ const fetchSingleUserProfile = (state = intitialState, action) => {
     case FETCH_SINGLE_USER:
       return {
         ...state,
-        user: action.payload
+        user: action.payload,
+        isAuthenticated: true
       };
       default:
       return state;
