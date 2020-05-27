@@ -29,3 +29,5 @@ export const registerUser = newUserDetails => (dispatch) => {
     dispatch(registerUserFailed({ message: err.response.data.error }));
   });
   };
+
+  
