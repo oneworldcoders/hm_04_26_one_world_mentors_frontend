@@ -5,7 +5,6 @@ import {Spinner} from 'react-bootstrap'
 import "./Login.css";
 
 function Login(props) {
-  console.log(props, 'props')
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
   const onEmailChange = (event) => {
