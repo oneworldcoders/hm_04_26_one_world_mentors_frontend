@@ -16,6 +16,7 @@ function Login(props) {
     setPassword(event.target.value);
   };
 
+  
   const handleSubmit = (event) => {
     event.preventDefault();
     let login_detail = {
@@ -35,7 +36,7 @@ function Login(props) {
       </div>
     );
   }
-  
+
   return (
     <>
       <div className="login_left">
