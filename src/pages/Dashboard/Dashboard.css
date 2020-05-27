@@ -1,15 +1,5 @@
 
 
-.sidebar {
-  height: 100%;
-  background: rgba(242, 201, 76, 0.69);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  padding: 1rem;
-}
-
 .dash {
   /* width: 20%;
   margin: auto;

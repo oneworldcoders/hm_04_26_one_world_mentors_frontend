@@ -13,6 +13,7 @@ export const loginUser = login_detail => dispatch => {
     .then(res => {
       const { token } = res.data;
       localStorage.setItem('jwtToken', token);
+      console.log(res, 'resssssssss')
       dispatch({
         type: LOGIN,
         payload: res.data

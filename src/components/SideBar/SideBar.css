@@ -3,7 +3,6 @@
 .sidebar {
   height: 100%;
   background: rgba(242, 201, 76, 0.69);
-  padding: .01rem;
 }
 
 .mentors{
@@ -11,7 +10,7 @@
   margin-top:40px
 }
 .mentee{
-  margin-top:5rem
+  margin-top:8rem
 }
 .dash-inner{
   width: 100%;
@@ -35,9 +34,7 @@
   font-size: 36px;
   /* line-height: 42px; */
 }
-.sidebar-links{
-  width: 100%;
-}
+
 .profile-links{
   font-size: 1.1rem;
   margin: 1rem auto;
@@ -49,7 +46,7 @@
   text-decoration: none
 }
 .sidebar-links{
-  margin-top: 2.7rem;
+  margin-top: 3.5rem;
   width: 14rem;
 }
 .sidelinks{

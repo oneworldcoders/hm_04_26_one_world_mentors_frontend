@@ -6,3 +6,10 @@ export const decodedUserId = () => {
   const {id} = decodedToken;
   return id
 }
+
+export const decodedUserEmail = () => {
+  const encodedToken = localStorage.getItem('jwtToken');
+  const decodedToken = jwt.decode(encodedToken);
+  const {email} = decodedToken;
+  return email
+}

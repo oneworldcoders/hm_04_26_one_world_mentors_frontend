@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import MenteeImage from "../../assets/henry.jpg";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
-import {fetchSingleUserProfile} from '../../redux/actions/userProfileAction'
+import {fetchSingleUserProfile} from '../../redux/actions/userProfileAction';
 import {decodedUserId} from '../../helpers/decoder'
 import "./SideBar.css";
 
@@ -12,10 +12,11 @@ class SideBar extends Component {
     this.props.fetchSingleUserProfile(LoggedUserId)
   }
   render() {
+    
     const {userProfile:{user:{data}}} = this.props
     const image = data && data.image_url
     return (
-      <>
+      <div className="sidebar">
         <div className="profile-img">
           <img
             className="mentee"
@@ -40,7 +41,7 @@ class SideBar extends Component {
           <h5 className="sidelinks">Search Mentees</h5>
           </Link>
         </div>
-      </>
+      </div>
     );
   }
 }
