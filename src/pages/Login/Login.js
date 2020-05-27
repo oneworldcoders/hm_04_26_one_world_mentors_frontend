@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
 import { loginUser } from "../../redux/actions/loginAction";
-import {Spinner} from 'react-bootstrap'
+// import {Spinner} from 'react-bootstrap'
+import BounceLoader from "react-spinners/BounceLoader";
 import "./Login.css";
 
 function Login(props) {
@@ -26,9 +27,12 @@ function Login(props) {
 
   if (props.user.loading) {
     return (
-      <Spinner animation="border" role="status">
-        <span className="sr-only">Loading...</span>
-      </Spinner>
+      <div className="sweet-loading">
+        <BounceLoader
+          size={150}
+          color={"#000000"}
+        />
+      </div>
     );
   }
   return (

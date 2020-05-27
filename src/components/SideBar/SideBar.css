@@ -1,0 +1,66 @@
+
+
+.sidebar {
+  height: 100%;
+  background: rgba(242, 201, 76, 0.69);
+  padding: .01rem;
+}
+
+.mentors{
+  background-color:red;
+  margin-top:40px
+}
+.mentee{
+  margin-top:5rem
+}
+.dash-inner{
+  width: 100%;
+  height: 80%;
+  border-radius: 1.5rem;
+  margin: auto;
+  background-color:  rgba(242, 201, 76, 0.69);
+  color: black;
+  padding: 1rem;
+}
+.mentors-list{
+ 
+  font-size: 1rem;
+  margin-top:40px
+}
+.choko{
+  background: #fff
+}
+.profile-img {
+  font-weight: 900;
+  font-size: 36px;
+  /* line-height: 42px; */
+}
+.sidebar-links{
+  width: 100%;
+}
+.profile-links{
+  font-size: 1.1rem;
+  margin: 1rem auto;
+  cursor: "pointer";
+  background-color: #4F4F4F;
+  color: #fff;
+  width: 10rem;
+  padding: .2rem;
+  text-decoration: none
+}
+.sidebar-links{
+  margin-top: 2.7rem;
+  width: 14rem;
+}
+.sidelinks{
+  font-size: 1.1rem;
+  cursor: "pointer";
+  background-color: #4F4F4F;
+  color: #fff;
+  width: 100%;
+  padding: .6rem;
+}
+.l-hover :hover{
+  background-color: grey;
+  text-decoration: none !important;
+}
