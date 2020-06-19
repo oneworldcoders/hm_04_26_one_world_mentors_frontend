@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { fetchMentors } from "../../redux/actions/fetchMentorsAction";
 import { connect } from "react-redux";
 import "./Dashboard.css";
-import MentorsList from "../../components/Mentors/MentorsList";
+import RightFrame from "../Dashboard/rightFrame/RightFrame";
 import SideBar from "../../components/SideBar/SideBar";
 
 class Dashboard extends Component {
@@ -18,7 +18,7 @@ class Dashboard extends Component {
           <SideBar/>
         </div>
         <div className="dash">
-          <MentorsList mentors={mentors} />
+          <RightFrame/>
         </div>
       </>
     );

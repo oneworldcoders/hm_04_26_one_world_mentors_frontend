@@ -2,7 +2,7 @@
 
 .sidebar {
   height: 100%;
-  background: rgba(242, 201, 76, 0.69);
+  background: #f2c94c;;
 }
 
 .mentors{
@@ -17,7 +17,7 @@
   height: 80%;
   border-radius: 1.5rem;
   margin: auto;
-  background-color:  rgba(242, 201, 76, 0.69);
+  background-color:  #f2c94c;
   color: black;
   padding: 1rem;
 }
