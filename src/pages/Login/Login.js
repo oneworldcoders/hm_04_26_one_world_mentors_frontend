@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import { loginUser } from "../../redux/actions/loginAction";
 import BounceLoader from "react-spinners/BounceLoader";
 import "./Login.css";
+import ConfirmEmail from "../../components/ConfirmEmailModal/ConfirmEmailModal";
 
 function Login(props) {
   const [email, setEmail] = useState();
@@ -78,6 +79,9 @@ function Login(props) {
                     onChange={onPasswordChange}
                   />
                 </div>
+              </div>
+              <div>
+                <ConfirmEmail email={email}/>
               </div>
               <div className="form-group row">
                 <div className="col-sm-12">
