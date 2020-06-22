@@ -6,6 +6,7 @@ import Main from "../layouts/Main/Main";
 import DashboardLayout from "../layouts/Dashboard/dashboardLayout"
 import Landing from "../pages/Landing/Landing";
 import Dashboard from "../pages/Dashboard/Dashboard";
+import UpdateProfile from "../pages/UpdateProfile/UpdateProfile"
 
 const AppRouter = () => (
   <BrowserRouter>
@@ -29,6 +30,11 @@ const AppRouter = () => (
         <Route path="/dashboard">
           <DashboardLayout>
             <Dashboard />
+          </DashboardLayout>
+        </Route>
+        <Route path="/profile/update">
+          <DashboardLayout>
+            <UpdateProfile />
           </DashboardLayout>
         </Route>
       </Switch>

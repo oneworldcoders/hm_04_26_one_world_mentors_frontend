@@ -8,10 +8,10 @@ class RightFrame extends Component {
         <div className="right-frame-wrapper">
           <div className="right-frame-upper">
             <div className="notification">
-              <i class="fa fa-envelope" aria-hidden="true"></i>
+              <i className="fa fa-envelope" aria-hidden="true"></i>
             </div>
             <div className="profile-image">
-              <img class="img-circle" src="../../../assets/dough.jpg" />
+              <img className="img-circle" src="../../../assets/dough.jpg" />
             </div>
             <div className="full-name ">Doug Bradbury</div>
             <div className="elem-gap">

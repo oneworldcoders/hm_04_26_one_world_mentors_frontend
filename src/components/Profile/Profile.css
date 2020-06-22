@@ -1,0 +1,19 @@
+.profile-form-wrapper {
+  margin: 16% auto;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.update{
+  font-size:2.5rem;
+  font-weight: bold;
+  margin-left: 10rem;
+  color: green;
+}
+.btn-lg{
+  margin-left: 10rem;
+}
+.image{
+  font-size: 1.5rem;
+}

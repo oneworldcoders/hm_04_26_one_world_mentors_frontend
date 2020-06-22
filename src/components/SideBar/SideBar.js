@@ -10,9 +10,9 @@ class SideBar extends Component {
   componentDidMount(){
     const LoggedUserId = decodedUserId()
     this.props.fetchSingleUserProfile(LoggedUserId)
+    // console.log(LoggedUserId, 'proppoppoppopopppspsssss')
   }
   render() {
-    
     const {userProfile:{user:{data}}} = this.props
     const image = data && data.image_url
     return (
@@ -24,14 +24,14 @@ class SideBar extends Component {
             src={image ? image : MenteeImage}
             alt="mentee"
           />
-          <Link className="l-hover" to="#">
+          <Link className="l-hover" to="/profile/update">
             <h5 className="profile-links">
               Edit profile
             </h5>
           </Link>
         </div>
         <div className="sidebar-links">
-          <Link className="l-hover" to="#">
+          <Link className="l-hover" to="/dashboard">
               <h5 className="sidelinks">DashBaord</h5>
           </Link>
           <Link className="l-hover" to="#">
