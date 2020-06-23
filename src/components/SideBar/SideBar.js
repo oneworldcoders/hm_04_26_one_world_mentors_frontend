@@ -35,7 +35,7 @@ class SideBar extends Component {
               fontWeight: "bolder",
             }}
           >
-            Welcome {data && data.first_name}
+            Welcome, {data && data.first_name}
           </p>
           <Link className="l-hover" to="/profile/update">
             <h5 className="profile-links">Edit profile</h5>

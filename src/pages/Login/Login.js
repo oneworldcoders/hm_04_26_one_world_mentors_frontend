@@ -64,7 +64,7 @@ function Login(props) {
               <div className="form-group row">
                 <label
                   htmlFor="colFormLabelLg"
-                  className="col-sm-3 col-form-label col-form-label-lg"
+                  className="col-sm-3 col-form-label col-form-label-lg re-input"
                 >
                   Password
                 </label>

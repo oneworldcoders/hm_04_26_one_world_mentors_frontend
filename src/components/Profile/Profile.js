@@ -66,6 +66,18 @@ class ProfileForm extends Component {
         user: { data },
       },
     } = this.props;
+    const {userProfile:{loading}} = this.props;
+    if (loading) {
+      return (
+        <div className="sweet-loading1">
+          <BounceLoader
+            size={150}
+            color={"#000000"}
+          />
+        </div>
+      );
+    }
+    
     return (
       <>
         <div className="profile-form-wrapper">
@@ -74,7 +86,7 @@ class ProfileForm extends Component {
           <div className="register_tagline">
             <div className="col-md-12 align-self-center">
               <form onSubmit={this.onSubmit}>
-                <div className="form-group row">
+                <div className="form-group passport row">
                    <ImageUploader
                     singleImage
                     name="image_url"
