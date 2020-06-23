@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { registerUser } from "../../redux/actions/registerAction";
-import {Spinner} from 'react-bootstrap'
+import BounceLoader from "react-spinners/BounceLoader";
+
 
 
 import "./register.css";
@@ -47,9 +48,12 @@ export class Register extends Component {
   render() {
     if (this.props.isLoading) {
       return (
-        <Spinner animation="border" role="status">
-          <span className="sr-only">Loading...</span>
-        </Spinner>
+        <div className="sweet-loading">
+          <BounceLoader
+            size={150}
+            color={"#000000"}
+          />
+        </div>
       );
     }
     return (

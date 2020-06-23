@@ -5,7 +5,7 @@ import {
   UPDATE_USER_IMAGE,
 } from "./types";
 
-const baseUrl = "https://owc-mentor-backend.herokuapp.com";
+const baseUrl = "http://localhost:3000/";
 const token = localStorage.getItem("jwtToken");
 const headers = {
   "Content-Type": "application/json",
@@ -33,6 +33,7 @@ export const updateUserProfile = (userId, updateData) => (dispatch) => {
         type: UPDATE_USER_PROFILE,
         payload: res.data,
       })
+      window.location = "/dashboard"
     })
     .catch((error) => console.log(error));
 };
@@ -41,7 +42,7 @@ export const updateUserProfileImage = (userId, userImage) => (dispatch) => {
   axios
     .patch(`${baseUrl}/user/profile_picture/${userId}`, userImage, { headers })
     .then((res) =>{
-      console.log(userImage, 'image')
+      console.log(res, 'res')
       dispatch({
         type: UPDATE_USER_IMAGE,
         payload: res.data,

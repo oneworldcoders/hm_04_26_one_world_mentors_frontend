@@ -6,6 +6,8 @@ import {
   updateUserProfile,
   updateUserProfileImage,
 } from "../../redux/actions/userProfileAction";
+import ImageUploader from 'react-images-upload';
+import BounceLoader from "react-spinners/BounceLoader";
 import { decodedUserId } from "../../helpers/decoder";
 
 class ProfileForm extends Component {
@@ -13,60 +15,48 @@ class ProfileForm extends Component {
     image_url: "",
     first_name: "",
     last_name: "",
-    email: "",
-    user_type: "",
   };
-  componentDidMount() {
+  componentDidMount() { 
     const LoggedUserId = decodedUserId();
     this.props.fetchSingleUserProfile(LoggedUserId);
   }
 
   onChange = (event) => {
     this.setState({ [event.target.name]: event.target.value });
-    console.log(this.state, 'this.state')
+  };
+  
+
+  onDrop = (pictures) => {
+    this.setState(prevState => ({ 
+      ...prevState, 
+      image_url: pictures[0] 
+    }));
   };
 
-  onImageChange = (event) => {
-    // console.log('helooooooooooooooo-1')
-    this.setState({ ...this.state, [event.target.name]: event.target });
-    // const { image_url } = this.state;
-    // console.log(this.state, 'this.state')
-    // if(!this.state.image_url === " "){
-    //   console.log('helooooooooooooooo-2')
-    //   const { image_url } = this.state;
-    //   // const imageUrl = image_url.split("\\")[2];
-    // const LoggedUserId = decodedUserId();
-    // this.props.updateUserProfileImage(LoggedUserId, image_url);
-    // }
-  };
+  // fileSelectedHandler = (event) => {
+  //   const LoggedUserId = decodedUserId();
+  //   this.setState({
+  //       image_url: event.target.files[0]
+  //   }, this.props.updateUserProfileImage(LoggedUserId, this.state.image_url));
+  //   // () => console.log(this.state, 'thissssssss'))
+  //   // () => this.fileUploadHandler());
+  // };
+  // onSubmitImage = async () => {
+  //   const { image_url } = this.state;
+  //   // user = { image_url: image_url }
+  //   const LoggedUserId = decodedUserId();
+  //   console.log(image_url, 'image_url')
+  //   this.props.updateUserProfileImage(LoggedUserId, image_url);
+  // };
 
-  handleFile = e => {
-    this.setState({ [e.target.name]: e.target.files[0].name });
-    console.log(this.state, 'this.state')
-  };
-
-  onSubmitImage = async () => {
-    const { image_url } = this.state;
-    // const updatedImage = {
-    //   image_url,
-    // };
-    var imageUrl = image_url.split("\\")[2];
-    console.log(imageUrl.toString(), 'image')
-    // const LoggedUserId = await decodedUserId();
-    // this.props.updateUserProfileImage(LoggedUserId, imageUrl.toString);
-  };
-
-  onSubmit = async (event) => {
+  onSubmit = (event) => {
     event.preventDefault();
-    const { first_name, last_name, email, user_type } = this.state;
+    const { first_name, last_name } = this.state;
     const updatedData = {
       first_name,
-      last_name,
-      email,
-      user_type,
+      last_name
     };
-    this.onSubmitImage();
-    const LoggedUserId = await decodedUserId();
+    const LoggedUserId = decodedUserId();
     this.props.updateUserProfile(LoggedUserId, updatedData);
   };
 
@@ -85,21 +75,18 @@ class ProfileForm extends Component {
             <div className="col-md-12 align-self-center">
               <form onSubmit={this.onSubmit}>
                 <div className="form-group row">
-                  <label
-                    htmlFor="colFormLabelLg"
-                    className="col-sm-3 col-form-label col-form-label-lg"
-                  >
-                    Image
-                  </label>
-                  <div className="image col-sm-9">
-                    <input
-                      type="file"
-                      onChange={this.handleFile}
-                      className="form-control-file"
-                      name="image_url"
-                      // value={this.state.image_url}
-                    />
-                  </div>
+                   <ImageUploader
+                    singleImage
+                    name="image_url"
+                    withIcon={false}
+                    buttonText="Upload image"
+                    className="upload file"
+                    onChange={this.onDrop}
+                    imgExtension={['.jpeg','.jpg', '.gif', '.png', '.gif']}
+                    maxFileSize={5242880}
+                    withPreview
+                    fileContainerStyle={{ width: '100% !important' }}
+                  />
                 </div>
                 <div className="form-group row">
                   <label
@@ -194,7 +181,7 @@ class ProfileForm extends Component {
 const mapStateToProps = (state) => ({
   user: state.userProfile,
   userProfile: state.updateUserProfile,
-  userImage: state.updateUserProfile
+  userImage: state.updateUserImage
 
 });
 export default connect(mapStateToProps, {

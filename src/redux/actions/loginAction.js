@@ -4,7 +4,7 @@ import { LOGIN, LOGIN_LOADING } from './types';
 export const requestLoading = type => ({
   type
 });
-const baseUrl = "https://owc-mentor-backend.herokuapp.com";
+const baseUrl = "http://localhost:3000/";
 
 export const loginUser = login_detail => dispatch => {
   dispatch(requestLoading(LOGIN_LOADING));

@@ -16,8 +16,7 @@
   
   .register_tagline {
     font-weight: 900;
-    font-size: 36px;
-    line-height: 42px;
+    /* font-size: 36px; */
   }
   
   .register_subtitle {
@@ -26,4 +25,6 @@
     font-size: 24px;
     color: #4F4F4F;
   }
-  
+  .sweet-loading{
+    margin: auto !important;
+  }

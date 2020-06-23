@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
 import { loginUser } from "../../redux/actions/loginAction";
-// import {Spinner} from 'react-bootstrap'
 import BounceLoader from "react-spinners/BounceLoader";
 import "./Login.css";
 
