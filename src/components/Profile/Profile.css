@@ -20,6 +20,13 @@
 .sweet-loading1{
   margin: 25rem 40rem auto !important;
 }
-.passport{
-  width: 10rem;
+.fileContainer {
+  padding: 20px 0;
+  box-shadow: none !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 !important;
+  transition: all 0.3s ease-in;
 }
