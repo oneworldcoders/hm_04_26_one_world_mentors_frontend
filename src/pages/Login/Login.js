@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import { loginUser } from "../../redux/actions/loginAction";
 // import {Spinner} from 'react-bootstrap'
 import BounceLoader from "react-spinners/BounceLoader";
+import auth0Client from "../../socialAuth";
 import "./Login.css";
 
 function Login(props) {
@@ -37,6 +38,7 @@ function Login(props) {
     );
   }
 
+ 
   return (
     <>
       <div className="login_left">
@@ -88,6 +90,7 @@ function Login(props) {
                 </div>
               </div>
             </form>
+            <button onClick={auth0Client.signIn}>Social Auth</button>
           </div>
         </div>
       </div>

@@ -4,10 +4,13 @@ import { connect } from "react-redux";
 import "./Dashboard.css";
 import RightFrame from "../Dashboard/rightFrame/RightFrame";
 import SideBar from "../../components/SideBar/SideBar";
+import auth0Client from "../../socialAuth";
 
 class Dashboard extends Component {
-  componentDidMount() {
-    this.props.fetchMentors();
+   componentDidMount() {
+    auth0Client.socialAuthHandler().then(()=>{
+      this.props.fetchMentors()
+    })
   }
 
   render() {

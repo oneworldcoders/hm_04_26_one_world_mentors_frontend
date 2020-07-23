@@ -4,6 +4,8 @@ import { Provider } from "react-redux";
 import AppRouter from "../src/router/AppRouter";
 import store from "./redux/store";
 import "bootstrap/dist/css/bootstrap.min.css";
+require("dotenv").config();
+
 ReactDOM.render(
   <Provider store={store}>
     <AppRouter />
