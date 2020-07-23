@@ -19,7 +19,7 @@ function DashboardLayout({ children }) {
       <div className="welcome">
         <div className="menu">
           <a style={{color: 'white'}}  href="/"><div className="logo">Mentors</div></a>
-          <div style={{marginLeft: 'auto', fontWeight: 'bold'}} className="action">Hello  <span style={{ color:'#32b643', fontWeight: 'bold'}}>{email}</span></div>
+          <div style={{marginLeft: 'auto', fontWeight: 'bold'}} className="action"> <span style={{ color:'#f2c94c', fontWeight: 'bold'}}>{email}</span></div>
           <a onClick={handleLogout} style={{marginRight: '5rem'}} className="link" href="/">
             Logout
           </a>

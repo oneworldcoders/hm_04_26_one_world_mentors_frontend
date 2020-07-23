@@ -1,9 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { registerUser } from "../../redux/actions/registerAction";
-import {Spinner} from 'react-bootstrap'
-
-
+import BounceLoader from "react-spinners/BounceLoader";
 import "./register.css";
 
 export class Register extends Component {
@@ -47,9 +45,12 @@ export class Register extends Component {
   render() {
     if (this.props.isLoading) {
       return (
-        <Spinner animation="border" role="status">
-          <span className="sr-only">Loading...</span>
-        </Spinner>
+        <div className="sweet-loading">
+          <BounceLoader
+            size={150}
+            color={"#000000"}
+          />
+        </div>
       );
     }
     return (
@@ -61,7 +62,7 @@ export class Register extends Component {
                 <div className="form-group row">
                   <label
                     htmlFor="colFormLabelLg"
-                    className="col-sm-3 col-form-label col-form-label-lg"
+                    className="col-sm-3 col-form-label col-form-label-lg re-input"
                   >
                     Firstname
                   </label>
@@ -80,7 +81,7 @@ export class Register extends Component {
                 <div className="form-group row">
                   <label
                     htmlFor="colFormLabelLg"
-                    className="col-sm-3 col-form-label col-form-label-lg"
+                    className="col-sm-3 col-form-label col-form-label-lg re-input"
                   >
                     Lastname
                   </label>
@@ -99,7 +100,7 @@ export class Register extends Component {
                 <div className="form-group row">
                   <label
                     htmlFor="colFormLabelLg"
-                    className="col-sm-3 col-form-label col-form-label-lg"
+                    className="col-sm-3 col-form-label col-form-label-lg re-input"
                   >
                     Email
                   </label>
@@ -118,7 +119,7 @@ export class Register extends Component {
                 <div className="form-group row">
                   <label
                     htmlFor="colFormLabelLg"
-                    className="col-sm-3 col-form-label col-form-label-lg"
+                    className="col-sm-3 col-form-label col-form-label-lg re-input"
                   >
                     password
                   </label>
@@ -137,7 +138,7 @@ export class Register extends Component {
                 <div className="form-group row">
                   <label
                     htmlFor="colFormLabelLg"
-                    className="col-sm-3 col-form-label col-form-label-lg"
+                    className="col-sm-3 col-form-label col-form-label-lg re-input"
                   >
                     Role
                   </label>

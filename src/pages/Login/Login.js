@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
 import { loginUser } from "../../redux/actions/loginAction";
-// import {Spinner} from 'react-bootstrap'
 import BounceLoader from "react-spinners/BounceLoader";
 import "./Login.css";
+import ConfirmEmail from "../../components/ConfirmEmailModal/ConfirmEmailModal";
 
 function Login(props) {
   const [email, setEmail] = useState();
@@ -65,7 +65,7 @@ function Login(props) {
               <div className="form-group row">
                 <label
                   htmlFor="colFormLabelLg"
-                  className="col-sm-3 col-form-label col-form-label-lg"
+                  className="col-sm-3 col-form-label col-form-label-lg re-input"
                 >
                   Password
                 </label>
@@ -79,6 +79,9 @@ function Login(props) {
                     onChange={onPasswordChange}
                   />
                 </div>
+              </div>
+              <div>
+                <ConfirmEmail email={email}/>
               </div>
               <div className="form-group row">
                 <div className="col-sm-12">
