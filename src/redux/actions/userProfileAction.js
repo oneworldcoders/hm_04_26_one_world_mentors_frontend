@@ -12,6 +12,7 @@ const headers = {
   Authorization: `Bearer ${token}`,
 };
 
+
 export const fetchSingleUserProfile = (userId) => (dispatch) => {
   axios
     .get(`${baseUrl}/user/${userId}`, { headers })
