@@ -146,6 +146,7 @@ class ProfileForm extends Component {
                       type="email"
                       onChange={this.onChange}
                       value={data && data.email}
+                      readOnly = {true}
                       className="form-control form-control-lg"
                       name="email"
                       placeholder="Email"
@@ -164,6 +165,7 @@ class ProfileForm extends Component {
                       type="text"
                       onChange={this.onChange}
                       value={data && data.user_type}
+                      readOnly = {true}
                       className="form-control form-control-lg"
                       name="user_type"
                       placeholder="Role"
