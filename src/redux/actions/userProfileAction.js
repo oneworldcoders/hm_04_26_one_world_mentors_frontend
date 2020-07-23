@@ -4,8 +4,8 @@ import {
   UPDATE_USER_PROFILE,
   UPDATE_USER_IMAGE,
 } from "./types";
+import { baseUrl } from "./baseURL";
 
-const baseUrl = "https://owc-mentor-backend.herokuapp.com";
 const token = localStorage.getItem("jwtToken");
 const headers = {
   "Content-Type": "application/json",

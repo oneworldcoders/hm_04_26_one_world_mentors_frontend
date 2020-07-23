@@ -45,7 +45,7 @@ class SideBar extends Component {
           <Link className="l-hover" to="/dashboard">
             <h5 className="sidelinks">DashBaord</h5>
           </Link>
-          <Link className="l-hover" to="#">
+          <Link className="l-hover" to="/courses">
             <h5 className="sidelinks">Course Tracks</h5>
           </Link>
           <Link className="l-hover" to="#">

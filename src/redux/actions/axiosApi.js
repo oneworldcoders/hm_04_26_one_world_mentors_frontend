@@ -1,7 +1,8 @@
 import axios from 'axios';
+import { baseUrl } from "./baseURL";
 
 const axiosInstance = axios.create({
-  baseURL: 'https://owc-mentor-backend.herokuapp.com',
+  baseURL: baseUrl,
   headers: {
     'Content-Type': 'application/json'
   },

@@ -1,10 +1,10 @@
 import axios from 'axios';
 import { LOGIN, LOGIN_LOADING } from './types';
+import { baseUrl } from "./baseURL";
 
 export const requestLoading = type => ({
   type
 });
-const baseUrl = "https://owc-mentor-backend.herokuapp.com";
 
 export const loginUser = login_detail => dispatch => {
   dispatch(requestLoading(LOGIN_LOADING));

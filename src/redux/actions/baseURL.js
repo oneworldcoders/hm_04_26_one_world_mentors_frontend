@@ -1,0 +1,1 @@
+export const baseUrl = "https://owc-mentor-backend.herokuapp.com";

@@ -5,7 +5,6 @@ const initialState = {
 };
 
 const forgotPasswordReducer = (state = initialState, action) => {
-  console.log(action.payload);
   
   switch (action.type) {
     case FORGOT_PASSWORD:
