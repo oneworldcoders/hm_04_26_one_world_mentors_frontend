@@ -26,11 +26,13 @@ const CourseList = () => {
         {courses && courses.map(course => (
 
           <Card className="acc-card" key={course.id}>
-            <Card.Header>
+            {/* <Card.Header> */}
               <Accordion.Toggle className="acc-header" as={Button} variant="link" eventKey={course.id}>
+                <Card.Header>
                 {course.name}
+                </Card.Header>
               </Accordion.Toggle>
-            </Card.Header>
+            {/* </Card.Header> */}
             <Accordion.Collapse className="acc-collapse" eventKey={course.id}>
               <Card.Body>
                 <div>

@@ -1,7 +1,5 @@
 import axios from "axios";
-import {
-  ADD_COURSE
-} from "./types";
+import { ADD_COURSE } from "./types";
 import { baseUrl } from "./baseURL";
 
 const token = localStorage.getItem("jwtToken");
@@ -10,16 +8,16 @@ const headers = {
   Authorization: `Bearer ${token}`,
 };
 
-export const addCourse = (userId, updateData) => (dispatch) => {
+export const addCourse = (courseData) => (dispatch) => {
   axios
-    .patch(`${baseUrl}/user/profile/${userId}`, updateData , { headers })
+    .post(`${baseUrl}/courses`, courseData, { headers })
     .then((res) => {
-      console.log(res.data, 'res.data')
+      console.log(res.data, "res.data");
       dispatch({
         type: ADD_COURSE,
         payload: res.data,
-      })
-      window.location = "/dashboard"
+      });
+      window.location = "/courses";
     })
     .catch((error) => console.log(error));
 };

@@ -1,10 +1,7 @@
 import React, { Component } from "react";
 import "./CourseForm.css";
 import { connect } from "react-redux";
-import {
-  updateUserProfile,
-} from "../../redux/actions/userProfileAction";
-import { decodedUserId } from "../../helpers/decoder";
+import { addCourse } from "../../redux/actions/addCourse";
 
 class CourseForm extends Component {
   state = {
@@ -17,26 +14,18 @@ class CourseForm extends Component {
     this.setState({ [event.target.name]: event.target.value });
   };
 
-
   onSubmit = (event) => {
     event.preventDefault();
     const { name, courseCode, description } = this.state;
     const courseData = {
       name,
       courseCode,
-      description
+      description,
     };
-    const LoggedUserId = decodedUserId();
-    // this.props.updateUserProfile(LoggedUserId, courseData);
+    this.props.addCourse(courseData);
   };
 
   render() {
-    // const {
-    //   user: {
-    //     user: { data },
-    //   },
-    // } = this.props;
-
     return (
       <>
         <div className="courseForm-form-wrapper">
@@ -73,7 +62,7 @@ class CourseForm extends Component {
                     <input
                       type="text"
                       onChange={this.onChange}
-                      name="name"
+                      name="courseCode"
                       className="form-control form-control-lg"
                       placeholder="Course code"
                     />
@@ -90,7 +79,7 @@ class CourseForm extends Component {
                     <input
                       type="text"
                       onChange={this.onChange}
-                      name="name"
+                      name="description"
                       className="form-control form-control-lg"
                       placeholder="Course details"
                     />
@@ -117,8 +106,8 @@ class CourseForm extends Component {
   }
 }
 const mapStateToProps = (state) => ({
-  userProfile: state.updateUserProfile,
+  course: state.addCourse,
 });
 export default connect(mapStateToProps, {
-  updateUserProfile,
+  addCourse,
 })(CourseForm);
