@@ -15,3 +15,5 @@ export const ADD_COURSE = 'ADD_COURSE';
 export const ALL_COURSES = 'ALL_COURSES';
 export const ENROLL_COURSE = 'ENROLL_COURSE';
 
+export const MENTEE_RECORD = 'MENTEE_RECORD';
+

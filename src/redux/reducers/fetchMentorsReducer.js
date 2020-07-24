@@ -9,7 +9,7 @@ const fetchMentors = (state = initialState, action) => {
     case FETCH_MENTORS:
       return {
         ...state,
-        mentors: action.payload,
+        mentors: action.payload.mentors,
       };
     default:
       return state;
