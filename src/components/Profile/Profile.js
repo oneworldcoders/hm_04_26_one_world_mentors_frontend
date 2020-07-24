@@ -31,7 +31,7 @@ class ProfileForm extends Component {
     const formData = new FormData();
     formData.append("image_url", picture[0]);
     await this.props.updateUserProfileImage(LoggedUserId, formData);
-    window.location = "/dashboard";
+    
   };
 
   onSubmit = (event) => {

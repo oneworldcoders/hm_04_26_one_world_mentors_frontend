@@ -48,6 +48,7 @@ export const updateUserProfileImage = (userId, userImage) => (dispatch) => {
         type: UPDATE_USER_IMAGE,
         payload: res.data,
       })
+      window.location = "/dashboard";
     })
     .catch((error) => console.log(error));
 };
