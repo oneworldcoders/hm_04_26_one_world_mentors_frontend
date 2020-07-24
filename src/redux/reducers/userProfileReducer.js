@@ -1,4 +1,4 @@
-import { FETCH_SINGLE_USER, UPDATE_USER_PROFILE, UPDATE_PROFILE_LOADING, UPDATE_USER_IMAGE } from "../actions/types";
+import { FETCH_SINGLE_USER, UPDATE_USER_IMAGE_LOADING, UPDATE_USER_PROFILE, UPDATE_PROFILE_LOADING, UPDATE_USER_IMAGE } from "../actions/types";
 
 const intitialState = {
   user: [],
@@ -11,7 +11,8 @@ const intitialUpdateState = {
 };
 
 const intitialImageState = {
-  updatedImage: "",
+  updatedImage: [],
+  loading: false,
 };
 class UserProfile {
   static fetchSingleUserProfile = (state = intitialState, action) => {
@@ -47,10 +48,16 @@ class UserProfile {
 
   static UpdateUserImage = (state = intitialImageState, action) => {
     switch (action.type) {
+      case UPDATE_USER_IMAGE_LOADING:
+        return {
+          ...state,
+        loading: true,
+        }
       case UPDATE_USER_IMAGE:
         return {
           ...state,
           updatedImage: action.payload,
+          loading: false,
         };
       default:
         return state;

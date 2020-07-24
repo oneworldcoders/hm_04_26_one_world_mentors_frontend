@@ -8,8 +8,8 @@
 .update{
   font-size:2.5rem;
   font-weight: bold;
-  margin: auto;
   color: green;
+  margin-left: 25%;
 }
 .btn-lg{
   margin-left: 10rem;
@@ -29,4 +29,10 @@
   flex-direction: column;
   margin: 0 !important;
   transition: all 0.3s ease-in;
+}
+.submit-btn{
+  margin-left: 8%;
+}
+.upload{
+  margin-left: 25%;
 }

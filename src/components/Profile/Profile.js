@@ -6,55 +6,40 @@ import {
   updateUserProfile,
   updateUserProfileImage,
 } from "../../redux/actions/userProfileAction";
-import ImageUploader from 'react-images-upload';
+import ImageUploader from "react-images-upload";
 import BounceLoader from "react-spinners/BounceLoader";
 import { decodedUserId } from "../../helpers/decoder";
 
 class ProfileForm extends Component {
   state = {
-    image_url: "",
+    image_url: [],
     first_name: "",
     last_name: "",
   };
-  componentDidMount() { 
+  componentDidMount() {
     const LoggedUserId = decodedUserId();
+    console.log(LoggedUserId, "LoggedUserId");
     this.props.fetchSingleUserProfile(LoggedUserId);
   }
 
   onChange = (event) => {
     this.setState({ [event.target.name]: event.target.value });
   };
-  
 
-  onDrop = (pictures) => {
-    this.setState(prevState => ({ 
-      ...prevState, 
-      image_url: pictures[0] 
-    }));
+  onDrop = async (picture) => {
+    const LoggedUserId = decodedUserId();
+    const formData = new FormData();
+    formData.append("image_url", picture[0]);
+    await this.props.updateUserProfileImage(LoggedUserId, formData);
+    
   };
-
-  // fileSelectedHandler = (event) => {
-  //   const LoggedUserId = decodedUserId();
-  //   this.setState({
-  //       image_url: event.target.files[0]
-  //   }, this.props.updateUserProfileImage(LoggedUserId, this.state.image_url));
-  //   // () => console.log(this.state, 'thissssssss'))
-  //   // () => this.fileUploadHandler());
-  // };
-  // onSubmitImage = async () => {
-  //   const { image_url } = this.state;
-  //   // user = { image_url: image_url }
-  //   const LoggedUserId = decodedUserId();
-  //   console.log(image_url, 'image_url')
-  //   this.props.updateUserProfileImage(LoggedUserId, image_url);
-  // };
 
   onSubmit = (event) => {
     event.preventDefault();
     const { first_name, last_name } = this.state;
     const updatedData = {
       first_name,
-      last_name
+      last_name,
     };
     const LoggedUserId = decodedUserId();
     this.props.updateUserProfile(LoggedUserId, updatedData);
@@ -66,18 +51,7 @@ class ProfileForm extends Component {
         user: { data },
       },
     } = this.props;
-    const {userProfile:{loading}} = this.props;
-    if (loading) {
-      return (
-        <div className="sweet-loading1">
-          <BounceLoader
-            size={150}
-            color={"#000000"}
-          />
-        </div>
-      );
-    }
-    
+
     return (
       <>
         <div className="profile-form-wrapper">
@@ -86,18 +60,18 @@ class ProfileForm extends Component {
           <div className="register_tagline">
             <div className="col-md-12 align-self-center">
               <form onSubmit={this.onSubmit}>
-                <div className="form-group passport row">
-                   <ImageUploader
+                <div className="form-group passport row upload">
+                  <ImageUploader
                     singleImage
                     name="image_url"
                     withIcon={false}
                     buttonText="Upload image"
-                    className="upload file"
+                    className="upload"
                     onChange={this.onDrop}
-                    imgExtension={['.jpeg','.jpg', '.gif', '.png', '.gif']}
+                    imgExtension={[".jpeg", ".jpg", ".gif", ".png", ".svg"]}
                     maxFileSize={5242880}
                     withPreview
-                    fileContainerStyle={{ width: '100% !important' }}
+                    fileContainerStyle={{ width: "100% !important" }}
                   />
                 </div>
                 <div className="form-group row">
@@ -146,6 +120,7 @@ class ProfileForm extends Component {
                       type="email"
                       onChange={this.onChange}
                       value={data && data.email}
+                      readOnly={true}
                       className="form-control form-control-lg"
                       name="email"
                       placeholder="Email"
@@ -164,6 +139,7 @@ class ProfileForm extends Component {
                       type="text"
                       onChange={this.onChange}
                       value={data && data.user_type}
+                      readOnly={true}
                       className="form-control form-control-lg"
                       name="user_type"
                       placeholder="Role"
@@ -171,11 +147,11 @@ class ProfileForm extends Component {
                   </div>
                 </div>
                 <div className="form-group row">
-                  <div className="col-sm-12">
+                  <div className=" submit-btn col-sm-12">
                     <button
                       href="#"
                       type="submit"
-                      className="btn btn-warning btn-lg"
+                      className="btn btn-warning btn-lg "
                     >
                       Submit
                     </button>
@@ -193,8 +169,7 @@ class ProfileForm extends Component {
 const mapStateToProps = (state) => ({
   user: state.userProfile,
   userProfile: state.updateUserProfile,
-  userImage: state.updateUserImage
-
+  userImage: state.updateUserImage,
 });
 export default connect(mapStateToProps, {
   fetchSingleUserProfile,
