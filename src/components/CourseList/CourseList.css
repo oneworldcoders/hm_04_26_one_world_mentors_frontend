@@ -4,5 +4,30 @@
 }
 .btn-primary{
   margin: 0 120%;
-  width: 15%
+  width: 15%;
+  background: #f2c94c !important;
+  color: #4F4F4F !important;
+  border-color:  #4F4F4F !important;
+}
+.acc-card{
+  background: #f2c94c !important;
+  text-decoration: none !important;
+}
+
+.acc-collapse{
+  background: #fff !important;
+}
+.btn-success{
+  background-color: #4F4F4F !important;
+}
+.acc-header{
+  text-decoration: none !important;
+  color: #4F4F4F !important;
+  font-weight: bolder !important;
+  font-size: 1.2rem !important;
+}
+.acc-card :hover{
+  text-decoration: none !important;
+  font-weight: bolder !important;
+  font-size: 1.25rem !important;
 }
