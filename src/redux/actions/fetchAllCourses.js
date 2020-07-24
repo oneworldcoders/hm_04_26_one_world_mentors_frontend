@@ -1,5 +1,5 @@
 import axios from "axios";
-import { FETCH_MENTORS } from "./types";
+import { ALL_COURSES } from "./types";
 import { baseUrl } from "./baseURL";
 
 
@@ -9,12 +9,12 @@ const headers = {
   'Authorization': `Bearer ${token}`,
 };
 
-export const fetchMentors = () => dispatch => {
+export const fetchCourses = () => dispatch => {
   axios
-    .get(`${baseUrl}/mentors`, {headers})
+    .get(`${baseUrl}/courses`, {headers})
     .then(res =>
       dispatch({
-        type: FETCH_MENTORS,
+        type: ALL_COURSES,
         payload: res.data
       })
     )

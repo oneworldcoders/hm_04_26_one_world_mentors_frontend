@@ -1,5 +1,6 @@
 import axios from "axios";
-import { FETCH_MENTORS } from "./types";
+import { ENROLL_COURSE } from "./types";
+import { toast } from "react-toastify";
 import { baseUrl } from "./baseURL";
 
 
@@ -9,14 +10,15 @@ const headers = {
   'Authorization': `Bearer ${token}`,
 };
 
-export const fetchMentors = () => dispatch => {
+export const enrollCourse = (courseDetail) => dispatch => {
   axios
-    .get(`${baseUrl}/mentors`, {headers})
-    .then(res =>
+    .patch(`${baseUrl}/mentees`, courseDetail, {headers})
+    .then(res => {
       dispatch({
-        type: FETCH_MENTORS,
+        type: ENROLL_COURSE,
         payload: res.data
       })
-    )
+      toast.success('Successfully Enrolled')
+    })
     .catch(error => console.log(error));
 };

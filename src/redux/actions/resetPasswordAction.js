@@ -1,7 +1,7 @@
 import axios from "axios";
 import { RESET_PASSWORD } from "./types";
+import { baseUrl } from "./baseURL";
 
-const baseUrl = "https://owc-mentor-backend.herokuapp.com";
 const headers = {
   'Content-Type': 'application/json'
 };

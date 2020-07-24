@@ -5,6 +5,8 @@ import fetchMentors from './fetchMentorsReducer';
 import UserProfile from './userProfileReducer';
 import forgotPasswordReducer from './forgotPasswordReducer';
 import resetPasswordReducer from './resetPasswordReducer';
+import fetchCourses from './fetchAllCourses';
+import enrollCourse from './enrollCourse';
 
 export default combineReducers({ 
   existingUser: loginReducer,
@@ -14,5 +16,7 @@ export default combineReducers({
   updateUserProfile: UserProfile.UpdateUserProfile,
   updateUserImage: UserProfile.UpdateUserImage,
   forgotPasswordReducer,
-  resetPasswordReducer
+  resetPasswordReducer,
+  fetchCourses,
+  enrollCourse,
  });

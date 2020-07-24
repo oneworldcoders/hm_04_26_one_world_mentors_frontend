@@ -10,6 +10,7 @@ import Landing from "../pages/Landing/Landing";
 import Dashboard from "../pages/Dashboard/Dashboard";
 import UpdateProfile from "../pages/UpdateProfile/UpdateProfile"
 import ResetPassword from "../pages/ResetPassword/ResetPassword";
+import Course from "../pages/Course/Course";
 
 const AppRouter = () => (
   <BrowserRouter>
@@ -40,6 +41,11 @@ const AppRouter = () => (
         <Route path="/dashboard">
           <DashboardLayout>
             <Dashboard />
+          </DashboardLayout>
+        </Route>
+        <Route path="/courses">
+          <DashboardLayout>
+            <Course />
           </DashboardLayout>
         </Route>
         <Route path="/profile/update">
