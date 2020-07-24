@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { fetchMentors } from "../../redux/actions/fetchMentorsAction";
 import { updateUserProfileImage } from "../../redux/actions/userProfileAction";
 import { connect } from "react-redux";
 import "./UpdateProfile.css";
@@ -8,10 +7,7 @@ import SideBar from "../../components/SideBar/SideBar";
 import BounceLoader from "react-spinners/BounceLoader";
 
 class UpdateProfile extends Component {
-  componentDidMount() {
-    this.props.fetchMentors();
-  }
-
+ 
   render() {
     const {
       userImage: { loading },
@@ -37,10 +33,8 @@ class UpdateProfile extends Component {
 }
 
 const mapStateToProps = (state) => ({
-  mentors: state.mentors,
   userImage: state.updateUserImage,
 });
 export default connect(mapStateToProps, {
-  fetchMentors,
   updateUserProfileImage,
 })(UpdateProfile);
