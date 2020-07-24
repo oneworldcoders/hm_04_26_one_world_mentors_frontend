@@ -4,6 +4,8 @@ import './CourseList.css';
 import { useDispatch, useSelector } from "react-redux";
 import { fetchCourses } from "../../redux/actions/fetchAllCourses";
 import { enrollCourse } from "../../redux/actions/enrollCourse";
+import { Link } from "react-router-dom";
+
 
 const CourseList = () => {
 
@@ -16,7 +18,11 @@ const CourseList = () => {
 
   return (
     <div className="course-list-wrapper">
+      
       <Accordion >
+      <Link className="" to="courseForm">
+      <Button className="accordion-button" variant="primary">Add Course</Button>
+      </Link>
         {courses && courses.map(course => (
 
           <Card key={course.id}>

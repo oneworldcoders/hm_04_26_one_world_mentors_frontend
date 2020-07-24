@@ -1,0 +1,40 @@
+.courseForm-form-wrapper {
+  margin: 12% auto;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  /* top: 20%; */
+}
+
+.update{
+  
+  font-size:2.5rem;
+  font-weight: bold;
+  color: green;
+  margin-left: 25%;
+}
+.btn-lg{
+  margin-left: 10rem;
+}
+.image{
+  font-size: 1.5rem;
+}
+.sweet-loading1{
+  margin: 25rem 40rem auto !important;
+}
+.fileContainer {
+  padding: 20px 0;
+  box-shadow: none !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 !important;
+  transition: all 0.3s ease-in;
+}
+.submit-btn{
+  margin-left: 8%;
+}
+.upload{
+  margin-left: 25%;
+}

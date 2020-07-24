@@ -11,6 +11,7 @@ import Dashboard from "../pages/Dashboard/Dashboard";
 import UpdateProfile from "../pages/UpdateProfile/UpdateProfile"
 import ResetPassword from "../pages/ResetPassword/ResetPassword";
 import Course from "../pages/Course/Course";
+import CourseForm from "../pages/Course/AddCourses"
 
 const AppRouter = () => (
   <BrowserRouter>
@@ -51,6 +52,11 @@ const AppRouter = () => (
         <Route path="/profile/update">
           <DashboardLayout>
             <UpdateProfile />
+          </DashboardLayout>
+        </Route>
+        <Route path="/courseForm">
+          <DashboardLayout>
+            <CourseForm />
           </DashboardLayout>
         </Route>
       </Switch>
