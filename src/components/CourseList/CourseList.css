@@ -1,4 +1,52 @@
 .course-list-wrapper {
   margin: 10% auto;
+  width: 100%;
+}
+.accordion{
   width: 50%;
+  margin: auto;
+}
+.acc-wrapper{
+  width: 15%;
+  margin: 0 80%;
+}
+.btn-primary{
+ 
+  width: 8%;
+  background: #f2c94c !important;
+  color: #4F4F4F !important;
+  border-color:  #4F4F4F !important;
+}
+.acc-card{
+  background: #f2c94c !important;
+  text-decoration: none !important;
+}
+
+.acc-collapse{
+  background: #fff !important;
+}
+.btn-success{
+  background-color: #4F4F4F !important;
+}
+.acc-header{
+  text-decoration: none !important;
+  color: #4F4F4F !important;
+  font-weight: bolder !important;
+  font-size: 1.2rem !important;
+}
+.acc-card :hover{
+  text-decoration: none !important;
+}
+
+.card-header {
+  padding: .75rem 1.25rem;
+  margin-bottom: 0;
+  background-color: inherit !important;
+  border-bottom: none !important;
+}
+.btn-lg {
+  font-size: 0.85rem !important;
+  line-height: 1.5;
+  border-radius: none !important;
+  border-color: #f2c94c !important;
 }

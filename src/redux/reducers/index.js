@@ -7,6 +7,7 @@ import forgotPasswordReducer from './forgotPasswordReducer';
 import resetPasswordReducer from './resetPasswordReducer';
 import fetchCourses from './fetchAllCourses';
 import enrollCourse from './enrollCourse';
+import addCourse from './addCoursesReducer';
 
 export default combineReducers({ 
   existingUser: loginReducer,
@@ -19,4 +20,5 @@ export default combineReducers({
   resetPasswordReducer,
   fetchCourses,
   enrollCourse,
+  addCourse,
  });
