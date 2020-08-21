@@ -18,7 +18,7 @@ const EnrolledCourse = (props) => {
 };
 EnrolledCourse.defaultProps = {
   name: 'None yet',
-  progress: 66,
+  progress: 0,
 };
 
 export default EnrolledCourse;
