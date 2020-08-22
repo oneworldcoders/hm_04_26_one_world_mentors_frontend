@@ -40,6 +40,7 @@ const CourseList = () => {
                 <Card.Body>
                   <div>
                     <p> {course.description}</p>
+                    <div> Hello</div>
                     <a
                       className="btn btn-success btn-lg float-right mb-2"
                       href="#"

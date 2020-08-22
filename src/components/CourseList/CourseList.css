@@ -8,11 +8,11 @@
 }
 .acc-wrapper{
   width: 15%;
-  margin: 0 80%;
+  float: right;
 }
 .btn-primary{
  
-  width: 8%;
+  /* width: 8% !important; */
   background: #f2c94c !important;
   color: #4F4F4F !important;
   border-color:  #4F4F4F !important;
