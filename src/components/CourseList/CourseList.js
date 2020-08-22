@@ -13,7 +13,7 @@ const CourseList = () => {
   useEffect(() => {
     dispatch(fetchCourses());
   }, [dispatch]);
-
+  // console.log(courses, 'resssssssssssss')
   return (
     <div className="course-list-wrapper ">
       <Link className="acc-wrapper" to="courseForm">

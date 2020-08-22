@@ -12,11 +12,12 @@ const headers = {
 export const fetchCourses = () => dispatch => {
   axios
     .get(`${baseUrl}/courses`, {headers})
-    .then(res =>
+    .then(res =>{
+      // console.log(res.data, 'coursesssss')
       dispatch({
         type: ALL_COURSES,
         payload: res.data
       })
-    )
+    })
     .catch(error => console.log(error));
 };
