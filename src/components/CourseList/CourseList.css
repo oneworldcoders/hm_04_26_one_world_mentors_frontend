@@ -13,12 +13,12 @@
 .btn-primary{
  
   /* width: 8% !important; */
-  background: #f2c94c !important;
+  background: #dbdbdb !important;
   color: #4F4F4F !important;
   border-color:  #4F4F4F !important;
 }
 .acc-card{
-  background: #f2c94c !important;
+  background: #dbdbdb !important;
   text-decoration: none !important;
 }
 
@@ -55,7 +55,7 @@
  align-items: center;
   width: 100%; 
   border: #444 solid 1px; 
-  background: #f2c94c; 
+  background: #dbdbdb; 
   padding: 4px; 
   border: none
 }
@@ -70,5 +70,5 @@
   font-size: 0.85rem !important;
   line-height: 1.5;
   border-radius: none !important;
-  border-color: #f2c94c !important;
+  border-color: #dbdbdb !important;
 }

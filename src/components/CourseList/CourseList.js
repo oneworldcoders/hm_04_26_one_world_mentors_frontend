@@ -65,13 +65,15 @@ const CourseSubtrack = () => {
                               display: "flex",
                               alignItems: "center",
                               color: "#444",
-                              width: "90%",
+                              width: "100%",
+                              justifyContent: 'space-around'
                             }}
                           >
                             <div style={{ padding: "5px", marginRight: "8px" }}>
                               {subtrack.name}.
                             </div>
                             <div>{subtrack.description}</div>
+                            <div>30Mins</div>
                           </div>
                         </div>
                       ))}

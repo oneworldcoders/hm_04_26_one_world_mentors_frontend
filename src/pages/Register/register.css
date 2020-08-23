@@ -1,7 +1,7 @@
 .register_left {
     width: 50%;
     height: 100%;
-    background: rgba(242, 201, 76, 0.69);
+    background: #dbdbdb;
     display: flex;
     flex-direction: column;
     align-items: center;

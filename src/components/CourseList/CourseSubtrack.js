@@ -28,6 +28,11 @@ const CourseList = ({ props }) => {
   };
   return (
     <div className="course-list-wrapper ">
+      <Link to='/courses' className="acc-wrapper" >
+        <Button className="accordion-button" variant="primary">
+          back
+        </Button>
+      </Link>
       <div className="accordion">
         <Card className="acc-card">
           <div className="acc-header">
@@ -35,10 +40,9 @@ const CourseList = ({ props }) => {
           </div>
           <Card.Body>
             <div>
-              {console.log(course, "balu")}
               <div style={{ marginBottom: "18px" }}>
                 {" "}
-                {course.course && course.description}
+                {course.course && course.course.description}
               </div>
               {course.subtracks &&
                 course.subtracks.map((subtrack) => (
