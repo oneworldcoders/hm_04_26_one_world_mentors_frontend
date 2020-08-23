@@ -3,7 +3,7 @@
   width: 100%;
 }
 .accordion{
-  width: 50%;
+  width: 60%;
   margin: auto;
 }
 .acc-wrapper{
@@ -37,7 +37,28 @@
 .acc-card :hover{
   text-decoration: none !important;
 }
-
+.subtrack2{
+  margin-bottom: 8px;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+  width: 100%; 
+  border: #444 solid 1px; 
+  background: #fff; 
+  padding: 4px; 
+  border: none
+}
+.subtrack{
+  margin-bottom: 8px;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+  width: 100%; 
+  border: #444 solid 1px; 
+  background: #f2c94c; 
+  padding: 4px; 
+  border: none
+}
 .card-header {
   padding: .75rem 1.25rem;
   margin-bottom: 0;
@@ -45,6 +66,7 @@
   border-bottom: none !important;
 }
 .btn-lg {
+  margin-top: 1.5rem;
   font-size: 0.85rem !important;
   line-height: 1.5;
   border-radius: none !important;

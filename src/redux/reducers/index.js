@@ -6,6 +6,7 @@ import UserProfile from './userProfileReducer';
 import forgotPasswordReducer from './forgotPasswordReducer';
 import resetPasswordReducer from './resetPasswordReducer';
 import fetchCourses from './fetchAllCourses';
+import fetchACourse from './fetchACourseReducer';
 import enrollCourse from './enrollCourse';
 import addCourse from './addCoursesReducer';
 import fetchMenteeRecord from './fetchMenteeRecordReducer';
@@ -25,4 +26,5 @@ export default combineReducers({
   addCourse,
   fetchMenteeRecord,
   fetchMenteeSubtracks,
+  fetchACourse
  });

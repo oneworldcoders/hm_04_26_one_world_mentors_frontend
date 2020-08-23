@@ -12,6 +12,7 @@ import UpdateProfile from "../pages/UpdateProfile/UpdateProfile"
 import ResetPassword from "../pages/ResetPassword/ResetPassword";
 import Course from "../pages/Course/Course";
 import CourseForm from "../pages/Course/AddCourses"
+import CourseSubtrack from "../pages/Course/CourseSubtrack"
 
 const AppRouter = () => (
   <BrowserRouter>
@@ -57,6 +58,11 @@ const AppRouter = () => (
         <Route path="/courseForm">
           <DashboardLayout>
             <CourseForm />
+          </DashboardLayout>
+        </Route>
+        <Route path="/subtrack/:id">
+          <DashboardLayout>
+            <CourseSubtrack />
           </DashboardLayout>
         </Route>
       </Switch>
