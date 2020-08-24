@@ -4,7 +4,7 @@ import ProgressBar from 'react-bootstrap/ProgressBar'
 const EnrolledCourse = (props) => {
   return (
     <div className="right-frame-lower">
-          <div>
+          <div style={{marginLeft:'4rem'}}>
             <span className="stack">
               Enrolled for {props.name}
             </span>
