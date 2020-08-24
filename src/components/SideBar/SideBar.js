@@ -31,7 +31,7 @@ class SideBar extends Component {
             style={{
               fontSize: "1.3rem",
               marginTop: ".6rem",
-              color: "green",
+              color: "#27ae60",
               fontWeight: "bolder",
             }}
           >

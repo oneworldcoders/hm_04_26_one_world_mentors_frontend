@@ -11,7 +11,7 @@ const Chart = () => {
         {
           label: "Rating",
           data: [50, 60, 30, 70, 80],
-          backgroundColor: ["#FF6384", "#36A2EB", "#FFCE56", '#444', '#43d8c9'],
+          backgroundColor: ["#FF6384", "#36A2EB", "#FFCE56", '#444', '#27ae60'],
           hoverBackgroundColor: [
             '#444', 
             '#fff',
