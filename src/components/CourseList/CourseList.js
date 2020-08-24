@@ -24,9 +24,7 @@ const CourseSubtrack = () => {
     dispatch(fetchACourse(courseId));
   };
 
-  const onCheck = () => {
-    console.log(completed, "completed");
-  };
+ 
   return (
     <div className="course-list-wrapper ">
       <Link className="acc-wrapper" to="courseForm">

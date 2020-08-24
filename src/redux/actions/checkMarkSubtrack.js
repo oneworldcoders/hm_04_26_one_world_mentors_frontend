@@ -1,4 +1,4 @@
-import { FETCH_A_COURSE } from "./types";
+import { CHECK_MARK_SUBTRACK } from "./types";
 import axios from "axios";
 import { baseUrl } from "./baseURL";
 
@@ -10,12 +10,14 @@ const headers = {
 };
 
 
-export const fetchACourse = (courseId) => dispatch => {
+export const checkMarkSubtrack = (subtrackId) => dispatch => {
+  console.log(headers, "headers");
   axios
-    .get(`${baseUrl}/courses/${courseId}`, {headers})
+    .patch(`${baseUrl}/mentee_subtracks/${subtrackId}`, {headers})
     .then(res =>{
+      console.log(res, "completed");
       dispatch({
-        type: FETCH_A_COURSE,
+        type: CHECK_MARK_SUBTRACK,
         payload: res.data
       })
     })

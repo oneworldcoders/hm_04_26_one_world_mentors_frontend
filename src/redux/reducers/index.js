@@ -11,6 +11,7 @@ import enrollCourse from './enrollCourse';
 import addCourse from './addCoursesReducer';
 import fetchMenteeRecord from './fetchMenteeRecordReducer';
 import fetchMenteeSubtracks from "./fetchMenteeSubtracksReducer";
+import checkMarkSubtrack from "./checkMarkSubtrackReducer"
 
 export default combineReducers({ 
   existingUser: loginReducer,
@@ -26,5 +27,6 @@ export default combineReducers({
   addCourse,
   fetchMenteeRecord,
   fetchMenteeSubtracks,
-  fetchACourse
+  fetchACourse,
+  checkMarkSubtrack
  });

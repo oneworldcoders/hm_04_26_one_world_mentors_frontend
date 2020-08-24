@@ -1,33 +1,32 @@
 import React, { useEffect, useState } from "react";
-import { Accordion, Card, Button } from "react-bootstrap";
+import { Card, Button } from "react-bootstrap";
 import "./CourseList.css";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchCourses } from "../../redux/actions/fetchAllCourses";
 import { fetchACourse } from "../../redux/actions/fetchACourse";
-import { enrollCourse } from "../../redux/actions/enrollCourse";
+import { checkMarkSubtrack } from "../../redux/actions/checkMarkSubtrack"
 import { Link } from "react-router-dom";
 import { useParams } from "react-router";
 
-const CourseList = ({ props }) => {
+const CourseList = () => {
   const [completed, setCompleted] = useState(false);
 
   const dispatch = useDispatch();
   const course = useSelector((state) => state.fetchACourse.course);
+  const checkSubtrack = useSelector((state) => state.checkMarkSubtrack)
   let { id } = useParams();
 
   useEffect(() => {
     dispatch(fetchACourse(id));
   }, []);
 
-  // const fetchSubtracks = (courseId) => {
-  //   dispatch(fetchACourse(courseId));
-  // };
-
-  const onCheck = () => {
-    console.log(completed, "completed");
+  const onCheck = (subtrackId) => {
+    // console.log(subtrackId, "subtrackId");
+    dispatch(checkMarkSubtrack(subtrackId));
+   
   };
   return (
     <div className="course-list-wrapper ">
+      {console.log(checkSubtrack, 'checkSubtrack')}
       <Link to='/courses' className="acc-wrapper" >
         <Button className="accordion-button" variant="primary">
           back
@@ -65,7 +64,7 @@ const CourseList = ({ props }) => {
                       style={{ marginRight: "8px" }}
                       type="checkbox"
                       name="completed"
-                      onChange={onCheck}
+                      onChange={() => onCheck(subtrack.id)}
                     />
                   </div>
                 ))}
